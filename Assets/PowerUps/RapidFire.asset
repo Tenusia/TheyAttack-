@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f145530f5e79c44681bab4d7fcc1b1e, type: 3}
-  m_Name: SPEEEEED
+  m_Script: {fileID: 11500000, guid: d2ae9e95b581cec48a3b5ea7c6e080c9, type: 3}
+  m_Name: RapidFire
   m_EditorClassIdentifier: 
-  amount: 20
-  boostDuration: 3
+  baseFireAmount: 0.01
+  duration: 5

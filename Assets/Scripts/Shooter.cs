@@ -8,7 +8,7 @@ public class Shooter : MonoBehaviour
     [SerializeField] GameObject projectilePrefab;
     [SerializeField] float projectileSpeed = 10f;
     [SerializeField] float projectileLifetime = 5f;
-    [SerializeField] float baseFiringRate = 0.2f;
+    [SerializeField] public float baseFiringRate = 0.2f;
 
     [Header("AI")]
     [SerializeField] bool useAI;
@@ -16,6 +16,11 @@ public class Shooter : MonoBehaviour
     [SerializeField] float minimumFireRate = 0.2f;
 
     [HideInInspector] public bool isFiring;
+    [HideInInspector] public bool isRapidFiring;
+    [HideInInspector] public float rapidFireDuration;
+    [HideInInspector] public float rapidFirePickup;
+    float defaultFiringRate;
+    float defaultVolume;
 
     Coroutine firingCoroutine;
     AudioPlayer audioPlayer;
@@ -23,6 +28,7 @@ public class Shooter : MonoBehaviour
     void Awake()
     {
         audioPlayer = FindObjectOfType<AudioPlayer>();
+        defaultFiringRate = baseFiringRate;
     }
 
 
@@ -37,6 +43,15 @@ public class Shooter : MonoBehaviour
     void Update()
     {
         Fire();
+        
+        if(isRapidFiring)
+        {
+            StartCoroutine(RapidFireCoroutine());
+        }
+        else if(!isRapidFiring)
+        {
+            StopCoroutine(RapidFireCoroutine());
+        }
     }
 
     void Fire()
@@ -75,5 +90,20 @@ public class Shooter : MonoBehaviour
 
             yield return new WaitForSeconds(timeToNextProjectile);
         }
+    }
+
+    IEnumerator RapidFireCoroutine()
+    {
+        defaultVolume = audioPlayer.shootingVolume;
+        audioPlayer.shootingVolume = 0.05f;
+        baseFiringRate = rapidFirePickup;
+
+        yield return new WaitForSeconds(rapidFireDuration);
+        //decrease volume of shooting. Or change shooting clip
+        
+
+        baseFiringRate = defaultFiringRate;
+        audioPlayer.shootingVolume = defaultVolume;
+        isRapidFiring = false;
     }
 }

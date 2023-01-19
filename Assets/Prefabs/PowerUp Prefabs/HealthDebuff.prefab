@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8256098417463424812}
   - component: {fileID: 8256098417463424813}
   - component: {fileID: 8256098417463424810}
+  - component: {fileID: -7559150380939434591}
   m_Layer: 0
   m_Name: HealthDebuff
   m_TagString: Untagged
@@ -125,3 +126,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupEffect: {fileID: 11400000, guid: d61d2b9249261bf4dac0a6094a7363ac, type: 2}
+--- !u!114 &-7559150380939434591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256098417463424811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d6d970025a9a64d90b0f9fb3a463e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

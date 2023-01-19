@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5312071325479503863}
   - component: {fileID: 5312071325479503862}
   - component: {fileID: 5312071325479503881}
+  - component: {fileID: 7394049315116843275}
   m_Layer: 0
   m_Name: MinorHealthPickup
   m_TagString: Untagged
@@ -125,3 +126,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   powerupEffect: {fileID: 11400000, guid: 93b433c2c9e252d489f242fa50c87580, type: 2}
+--- !u!114 &7394049315116843275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5312071325479503880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0d6d970025a9a64d90b0f9fb3a463e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

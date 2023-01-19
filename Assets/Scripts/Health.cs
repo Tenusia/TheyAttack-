@@ -9,8 +9,9 @@ public class Health : MonoBehaviour
     [SerializeField] public int maxHealth = 50;
     [SerializeField] int score = 50;
     [SerializeField] ParticleSystem hitEffect;
-    
     [SerializeField] bool ApplyCameraShake;
+
+    public GameObject shield;
     CameraShake cameraShake;
     AudioPlayer audioPlayer;
     ScoreKeeper scoreKeeper;
@@ -18,11 +19,19 @@ public class Health : MonoBehaviour
 
 
     void Awake() 
-    {
+    {     
         cameraShake = Camera.main.GetComponent<CameraShake>();
         audioPlayer = FindObjectOfType<AudioPlayer>();   
         scoreKeeper = FindObjectOfType<ScoreKeeper>(); 
         levelManager = FindObjectOfType<LevelManager>(); 
+    }
+
+    void Start() 
+    {
+        if (shield !=null)
+        {
+            DeActivateShield();    
+        }
     }
 
     void Update() 
@@ -36,11 +45,20 @@ public class Health : MonoBehaviour
 
         if(damageDealer != null)
         {
-            TakeDamage(damageDealer.GetDamage());
-            PlayHitEffect();
-            audioPlayer.PlayDamageClip();
-            ShakeCamera();
-            damageDealer.Hit();
+            if(HasShield())
+            {
+                DeActivateShield();
+                //PlayHitEffect();
+                ShakeCamera();
+            }
+            else
+            {
+                TakeDamage(damageDealer.GetDamage());
+                PlayHitEffect();
+                audioPlayer.PlayDamageClip();
+                ShakeCamera();
+                damageDealer.Hit();
+            }
         }
     }
     public int GetHealth()
@@ -84,6 +102,28 @@ public class Health : MonoBehaviour
         if(cameraShake != null && ApplyCameraShake)
         {
             cameraShake.Play();
+        }
+    }
+
+    public void ActivateShield()
+    {
+        shield.SetActive(true);
+    }
+
+    void DeActivateShield()
+    {
+        shield.SetActive(false);
+    }
+
+    bool HasShield()
+    {
+        if(shield != null)
+        {
+            return shield.activeSelf;
+        }
+        else
+        {
+            return false;
         }
     }
 }

@@ -13,14 +13,6 @@ public class PickupSpeedBuff : PowerupEffect
     {
         originalSpeed = target.GetComponent<Player>().moveSpeed;
         target.GetComponent<Player>().moveSpeed += amount;
-
-        //Player.instance.StartCoroutine(SpeedBoost());
-
-        //target.GetComponent<Player>().moveSpeed = originalSpeed;
-    }
-
-    IEnumerator SpeedBoost()
-    {
-        yield return new WaitForSeconds(2f);
+        //Add coroutine in Player for a wait. See also RapidFire pickup script.
     }
 }

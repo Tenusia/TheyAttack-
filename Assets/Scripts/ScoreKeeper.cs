@@ -42,7 +42,6 @@ public class ScoreKeeper : MonoBehaviour
     {
         currentScore += updatedScore;
         Mathf.Clamp(currentScore, 0, int.MaxValue);
-        //Debug.Log(currentScore);
 
         if (currentScore > PlayerPrefs.GetInt("HighScore", 0))
         {
@@ -59,6 +58,7 @@ public class ScoreKeeper : MonoBehaviour
     public void ResetHighScore()
     {
         PlayerPrefs.DeleteAll();
+        //Somehow not working anymore
     }
    
 }
