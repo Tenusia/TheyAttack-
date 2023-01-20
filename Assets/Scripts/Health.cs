@@ -48,7 +48,7 @@ public class Health : MonoBehaviour
             if(HasShield())
             {
                 DeActivateShield();
-                //PlayHitEffect();
+                //PlayHitSoundEffect();
                 ShakeCamera();
             }
             else
@@ -79,6 +79,12 @@ public class Health : MonoBehaviour
     {
         if(!isPlayer)
         {
+            if(gameObject.tag == "Boss")
+            {
+                audioPlayer.TurnOnAudioSource();
+                //Play Celebration effects/explosion
+                levelManager.LoadNextLevel();
+            }
             scoreKeeper.ModifyScore(score);
         }
         else
@@ -107,11 +113,13 @@ public class Health : MonoBehaviour
 
     public void ActivateShield()
     {
+        audioPlayer.ShieldClip();
         shield.SetActive(true);
     }
 
     void DeActivateShield()
     {
+        audioPlayer.ShieldClip();
         shield.SetActive(false);
     }
 

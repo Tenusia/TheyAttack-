@@ -7,15 +7,22 @@ public class AudioPlayer : MonoBehaviour
     [Header("Shooting")]
     [SerializeField] AudioClip shootingClip;
     [SerializeField] [Range(0f, 1f)] public float shootingVolume = 1f;
+    [SerializeField] AudioClip gunPoolShootingClip;
+    [SerializeField] [Range(0f, 1f)] public float gunPoolVolume = 1f;
     
     [Header("Damage")]
     [SerializeField] AudioClip damageClip;
     [SerializeField] [Range(0f, 1f)] float damageVolume = 1f;
+    [SerializeField] AudioClip forceField;
+    [SerializeField] [Range(0f, 1f)] float shieldVolume = 1f;
+
     static AudioPlayer instance;
+    AudioSource audioSource;
 
     void Awake()
     {
         ManageSingleton();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void ManageSingleton()
@@ -37,9 +44,28 @@ public class AudioPlayer : MonoBehaviour
         PlayClip(shootingClip, shootingVolume);
     }
 
+    public void PlayGunPoolClip()
+    {
+        PlayClip(gunPoolShootingClip, gunPoolVolume);
+    }
+
     public void PlayDamageClip()
     {
         PlayClip(damageClip, damageVolume);
+    }
+    public void ShieldClip()
+    {
+        PlayClip(forceField, shieldVolume);
+    }
+
+    public void TurnOffAudioSource()
+    {
+        audioSource.Stop();
+    }
+
+    public void TurnOnAudioSource()
+    {
+        audioSource.Play();
     }
 
     void PlayClip(AudioClip clip, float volume)

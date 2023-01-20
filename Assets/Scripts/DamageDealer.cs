@@ -13,6 +13,13 @@ public class DamageDealer : MonoBehaviour
 
     public void Hit()
     {
+        if(gameObject.tag != "Boss")
+        {
         Destroy(gameObject);
+        }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -8,6 +8,12 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] float timeBetweenWaves = 0f;
     WaveConfigSO currentWave;
     [SerializeField] bool isLooping;
+    LevelManager levelManager;
+
+    void Awake()
+    {
+        levelManager = FindObjectOfType<LevelManager>();
+    }
 
     void Start()
     {
@@ -38,5 +44,7 @@ public class EnemySpawner : MonoBehaviour
             }
         }
         while(isLooping);
+        
+        levelManager.LoadBossBattle();
     }
 }

@@ -15,7 +15,7 @@ MonoBehaviour:
   enemyPrefabs:
   - {fileID: 2320963064401724806, guid: 782d638b2e14d5847914dbfc655fae86, type: 3}
   - {fileID: 2320963064401724806, guid: 782d638b2e14d5847914dbfc655fae86, type: 3}
-  - {fileID: 8256098417463424811, guid: 978f5f83c955ede4a9cf47e8399251ca, type: 3}
+  - {fileID: 6772645848965469953, guid: 4fbaa5c679830fb44bb1d7130ce7b35e, type: 3}
   - {fileID: 2320963064401724806, guid: 782d638b2e14d5847914dbfc655fae86, type: 3}
   - {fileID: 2320963064401724806, guid: 782d638b2e14d5847914dbfc655fae86, type: 3}
   pathPrefab: {fileID: 1126077745732637909, guid: 43d38756a2080c6478c1c8ffe55ab144, type: 3}

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     [SerializeField] float sceneLoadDelay = 2f;
+    [SerializeField] float sceneBossLoadDelay = 5f;
+
     ScoreKeeper scoreKeeper;
 
     void Awake()
@@ -27,6 +29,15 @@ public class LevelManager : MonoBehaviour
     public void LoadGameOver()
     {
         StartCoroutine(WaitAndLoad("GameOver", sceneLoadDelay));
+    }
+
+    public void LoadBossBattle()
+    {
+        StartCoroutine(WaitAndLoad("BossLevel", sceneBossLoadDelay));
+    }
+    public void LoadNextLevel()
+    {
+        StartCoroutine(WaitAndLoad("MainLevel", sceneBossLoadDelay));
     }
 
     public void LoadSettings()
