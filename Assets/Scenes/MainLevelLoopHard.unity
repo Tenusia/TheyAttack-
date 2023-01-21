@@ -1099,15 +1099,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c6a932aea5b14034b8d78e49a15b379d, type: 2}
   - {fileID: 11400000, guid: 3b4a66bf7cb770c4b8e38306f15ddd4f, type: 2}
   - {fileID: 11400000, guid: 83b096634b5770d4eb0c9f665307ca6a, type: 2}
-  - {fileID: 11400000, guid: e964af170f945cf4289b83ce8579282a, type: 2}
-  - {fileID: 11400000, guid: 07252e805c973d24599a9ef8666fe363, type: 2}
+  - {fileID: 11400000, guid: 382fdd5ed50b4f24092aa47a87586a1b, type: 2}
+  - {fileID: 11400000, guid: f6a2a236ef4fe5c4ca40eac0323db61c, type: 2}
   - {fileID: 11400000, guid: 30359f4f3dd1f604d9289ce4050e4ac2, type: 2}
   - {fileID: 11400000, guid: 750f0a1c0b240bf429d89ad31296ea76, type: 2}
   - {fileID: 11400000, guid: 5b6c86a2787f2574e85ef9678a4466c3, type: 2}
-  - {fileID: 11400000, guid: a07c245f3e8322646a66b457f77044ba, type: 2}
+  - {fileID: 11400000, guid: ce4d7c90254ff0f4e8ea11f4d65e7a97, type: 2}
   - {fileID: 11400000, guid: 0f8272d5eacb915449787e668865977f, type: 2}
+  - {fileID: 11400000, guid: 203cc3875d876ce4a8c81d45993846f4, type: 2}
+  - {fileID: 11400000, guid: d64000ad0a025c844b5f61a0befd789a, type: 2}
   timeBetweenWaves: 2
-  isLooping: 0
+  isLooping: 1
 --- !u!4 &1582785833
 Transform:
   m_ObjectHideFlags: 0
@@ -1468,10 +1470,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -7082460902798598452, guid: 9cbbe68e6b5c9f8479d807ae1c24936b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: -4642256506550417983, guid: 9cbbe68e6b5c9f8479d807ae1c24936b, type: 3}
       propertyPath: shield
       value: 

@@ -1202,7 +1202,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fc71298087912e146b75c12101cfa932, type: 2}
   - {fileID: 11400000, guid: 2d7880cc85bdd4e45b5e8c856de0aba7, type: 2}
   timeBetweenWaves: 1
-  isLooping: 0
+  isLooping: 1
 --- !u!4 &1582785833
 Transform:
   m_ObjectHideFlags: 0
@@ -1662,6 +1662,22 @@ PrefabInstance:
     - target: {fileID: 6639721040744322694, guid: 6e541fc5e6735734e835d1e33b6ca77c, type: 3}
       propertyPath: m_Name
       value: Boss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639721041290033044, guid: 6e541fc5e6735734e835d1e33b6ca77c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5a15a24c2c677a40acea60f42a5aad1, type: 3}
+    - target: {fileID: 6639721041290033045, guid: 6e541fc5e6735734e835d1e33b6ca77c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.20451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639721041290033045, guid: 6e541fc5e6735734e835d1e33b6ca77c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.20451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6639721041290033045, guid: 6e541fc5e6735734e835d1e33b6ca77c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.20451
       objectReference: {fileID: 0}
     - target: {fileID: 6639721041290033045, guid: 6e541fc5e6735734e835d1e33b6ca77c, type: 3}
       propertyPath: m_LocalPosition.y

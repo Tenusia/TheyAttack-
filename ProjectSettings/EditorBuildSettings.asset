@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BossLevel.unity
     guid: f36b7795c4c2b6e48bc079dce4483113
   - enabled: 1
+    path: Assets/Scenes/MainLevelLoopHard.unity
+    guid: 269abed6748d15b41812ab26fd6b9907
+  - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: ace6309eaf5a2c1428d6e1ae3bc9a270
   m_configObjects:

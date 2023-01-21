@@ -35,9 +35,10 @@ public class LevelManager : MonoBehaviour
     {
         StartCoroutine(WaitAndLoad("BossLevel", sceneBossLoadDelay));
     }
+
     public void LoadNextLevel()
     {
-        StartCoroutine(WaitAndLoad("MainLevel", sceneBossLoadDelay));
+        StartCoroutine(WaitAndLoad("MainLevelLoopHard", sceneBossLoadDelay));
     }
 
     public void LoadSettings()

@@ -58,7 +58,7 @@ public class ScoreKeeper : MonoBehaviour
     public void ResetHighScore()
     {
         PlayerPrefs.DeleteAll();
-        //Somehow not working anymore
+        //Somehow not working from main menu
     }
    
 }

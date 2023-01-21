@@ -65,7 +65,10 @@ public class AudioPlayer : MonoBehaviour
 
     public void TurnOnAudioSource()
     {
-        audioSource.Play();
+        if(audioSource != null)
+        {
+            audioSource.Play();
+        }
     }
 
     void PlayClip(AudioClip clip, float volume)
